@@ -1,0 +1,57 @@
+(⎈ |admin:default)?127 nsxt-ocp4)oc get co                                                                                                                                                                                                  (master)nsxt-ocp4
+NAME                                       VERSION   AVAILABLE   PROGRESSING   DEGRADED   SINCE
+authentication                             4.3.26    True        False         False      3m
+cloud-credential                           4.3.26    True        False         False      45m
+cluster-autoscaler                         4.3.26    True        False         False      9m41s
+console                                    4.3.26    True        False         False      3m41s
+dns                                        4.3.26    True        False         False      14m
+image-registry                             4.3.26    True        False         False      10m
+ingress                                    4.3.26    True        False         False      9m7s
+insights                                   4.3.26    True        False         False      10m
+kube-apiserver                             4.3.26    True        False         False      13m
+kube-controller-manager                    4.3.26    True        False         False      26m
+kube-scheduler                             4.3.26    True        False         False      35m
+machine-api                                4.3.26    True        False         False      36m
+machine-config                             4.3.26    True        False         False      14m
+marketplace                                4.3.26    True        False         False      9m44s
+monitoring                                 4.3.26    True        False         False      3m33s
+network                                    4.3.26    True        False         False      41m
+node-tuning                                4.3.26    True        False         False      4m37s
+nsx-ncp                                    0.0.1     True        False         False      41m
+openshift-apiserver                        4.3.26    True        False         False      11m
+openshift-controller-manager               4.3.26    True        False         False      14m
+openshift-samples                          4.3.26    True        False         False      8m25s
+operator-lifecycle-manager                 4.3.26    True        False         False      12m
+operator-lifecycle-manager-catalog         4.3.26    True        False         False      12m
+operator-lifecycle-manager-packageserver   4.3.26    True        False         False      4m14s
+service-ca                                 4.3.26    True        False         False      38m
+service-catalog-apiserver                  4.3.26    True        False         False      12m
+service-catalog-controller-manager         4.3.26    True        False         False      12m
+storage                                    4.3.26    True        False         False      10m
+(⎈ |admin:default)√ nsxt-ocp4)./openshift-install --dir=ncp-oc4-vsphere/ wait-for install-complete --log-level=DEBUG                                                                                                                        (master)nsxt-ocp4
+DEBUG OpenShift Installer 4.3.26                   
+DEBUG Built from commit c8646594fa1a38d03dd2b45538b95d85be8a0734 
+DEBUG Fetching Install Config...                   
+DEBUG Loading Install Config...                    
+DEBUG   Loading SSH Key...                         
+DEBUG   Loading Base Domain...                     
+DEBUG     Loading Platform...                      
+DEBUG   Loading Cluster Name...                    
+DEBUG     Loading Base Domain...                   
+DEBUG     Loading Platform...                      
+DEBUG   Loading Pull Secret...                     
+DEBUG   Loading Platform...                        
+DEBUG Using Install Config loaded from state file  
+DEBUG Reusing previously-fetched Install Config    
+INFO Waiting up to 30m0s for the cluster at https://api.oc4.corp.local:6443 to initialize... 
+DEBUG Cluster is initialized                       
+INFO Waiting up to 10m0s for the openshift-console route to be created... 
+DEBUG Route found in openshift-console namespace: console 
+DEBUG Route found in openshift-console namespace: downloads 
+DEBUG OpenShift console route is created           
+INFO Install complete!                            
+INFO To access the cluster as the system:admin user when using 'oc', run 'export KUBECONFIG=/root/nsxt-ocp4/ncp-oc4-vsphere/auth/kubeconfig' 
+INFO Access the OpenShift web-console here: https://console-openshift-console.apps.oc4.corp.local 
+INFO Login to the console with user: kubeadmin, password: YquCn-byrLz-9YabU-CLsUr 
+(⎈ |admin:default)√ nsxt-ocp4)                                                                                                                                                                                                              (master)nsxt-ocp4
+

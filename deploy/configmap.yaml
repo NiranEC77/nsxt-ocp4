@@ -24,7 +24,7 @@ data:
     adaptor = openshift4
 
     # Specify cluster for adaptor.
-    cluster = ocp
+    cluster = oc4
 
     # Log level for NCP operations
     # Choices: NOTSET DEBUG INFO WARNING ERROR CRITICAL
@@ -114,11 +114,11 @@ data:
     # [<scheme>://]<ip_adress>[:<port>]
     # If scheme is not provided https is used. If port is not provided port 80
     # is used for http and port 443 for https.
-    nsx_api_managers = 10.114.209.47,10.114.209.48,10.114.209.49
+    nsx_api_managers = 192.168.110.33
 
     nsx_api_user = admin
 
-    nsx_api_password = VMwareVMware1!
+    nsx_api_password = VMware1!VMware1!
 
     # If True, skip fatal errors when no endpoint in the NSX management cluster
     # is available to serve a request, and retry the request instead
@@ -253,14 +253,14 @@ data:
     # CIDR,IP_1-IP_2,... Mixing different formats (e.g. UUID, CIDR&IP_Range) is
     # not supported.
     #external_ip_pools = []
-    external_ip_pools = 10.114.17.0/25
+    external_ip_pools = 10.208.40.0/24
 
     # Resource ID of the top-tier router for the container cluster network,
     # which could be either tier0 or tier1. If policy_nsxapi is enabled, should
     # be ID of a tier0/tier1 gateway.
     #top_tier_router = <None>
 
-    tier0_gateway = t0a
+    tier0_gateway = t0
 
     # Option to use single-tier router for the container cluster network
     single_tier_topology = True
@@ -278,7 +278,8 @@ data:
     # hosting containers are deployed must be enabled on this transport zone
     #overlay_tz = <None>
     
-    overlay_tz = 3efa070d-3870-4eb1-91b9-a44416637922
+    overlay_tz = 1b3a2f36-bfd1-443e-a0f6-4de01abc963e
+
     
     # Name of the enforcement point used to look up overlay transport zones and
     # edge cluster paths, e.g. vmc-enforcementpoint, default, etc.
@@ -345,7 +346,7 @@ data:
     # service. Information could be retrieved from Tier0 router
     #edge_cluster = <None>
     
-    edge_cluster = 3088dc2b-d097-406e-b9de-7a161e8d0e47
+    edge_cluster = ee764b7a-41a4-4088-90b0-4e5617f5b675
     
     # Inventory feature switch
     #enable_inventory = True
@@ -470,7 +471,7 @@ data:
     [k8s]
 
     # Kubernetes API server IP address.
-    apiserver_host_ip = api-int.ocp.yasen.local
+    apiserver_host_ip = api.oc4.corp.local
 
     # Kubernetes API server port.
     apiserver_host_port = 6443
